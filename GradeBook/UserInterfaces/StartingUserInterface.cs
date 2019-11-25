@@ -47,7 +47,7 @@ namespace GradeBook.UserInterfaces
                 gradeBook = new RankedGradeBook(name);
             else
             {
-                Console.WriteLine("{0} +  is not a supported type of gradebook, please try again", parts[2].ToLower());
+                Console.WriteLine(parts[2].ToLower() + " is not a supported type of gradebook, please try again");
                 return;
             }
                 
