@@ -107,10 +107,9 @@ namespace GradeBook.GradeBooks
             }
         }
 
-        public virtual double GetGPA(char letterGrade, StudentType studentType)
+        public virtual double GetGPA(char letterGrade, StudentType studentType,bool isWeighted)
         {   
             var gpa = 0;
-            
             
             switch (letterGrade)
             {
@@ -130,8 +129,8 @@ namespace GradeBook.GradeBooks
                     gpa = 0;
                     break;
             }
-            
-            if(IsWeighted = true && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled )){
+
+            if(IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled )){
                 gpa++;
             }
             return gpa;
